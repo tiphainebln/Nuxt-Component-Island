@@ -1,0 +1,41 @@
+{
+  "name": "nuxt-component-islands-demo",
+  "private": true,
+  "type": "module",
+  "description": "A didactic Nuxt 4 proof-of-concept that teaches Nuxt component islands (server components) through a side-by-side comparison.",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@nuxt/ui": "^4.9.0",
+    "@shikijs/markdown-it": "^4.3.0",
+    "markdown-it": "^14.2.0",
+    "nuxt": "^4.4.8",
+    "shiki": "^4.3.0",
+    "vue": "^3.5.0",
+    "vue-router": "^4.4.0"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.16.0",
+    "@types/markdown-it": "^14.1.2",
+    "eslint": "^9.0.0",
+    "typescript": "^5.6.0",
+    "vue-tsc": "^3.3.0"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "pnpm": {
+    "overrides": {
+      "esbuild": "0.28.1"
+    }
+  }
+}

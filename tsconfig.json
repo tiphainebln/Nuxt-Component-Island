@@ -1,0 +1,14 @@
+{
+  // Nuxt 4 uses TypeScript "project references": it generates four tuned
+  // tsconfigs under `.nuxt/` (after `pnpm install` runs `nuxt prepare`). This
+  // root file just points at them. Strict mode is configured in nuxt.config.ts
+  // (`typescript.strict: true`) and flows into these generated configs.
+  // Run `pnpm typecheck` to type-check the whole project.
+  "files": [],
+  "references": [
+    { "path": "./.nuxt/tsconfig.app.json" },
+    { "path": "./.nuxt/tsconfig.server.json" },
+    { "path": "./.nuxt/tsconfig.shared.json" },
+    { "path": "./.nuxt/tsconfig.node.json" }
+  ]
+}

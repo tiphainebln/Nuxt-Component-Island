@@ -1,0 +1,60 @@
+/* app/assets/css/main.css
+ * Tailwind v4 + Nuxt UI are loaded through these two imports. Nuxt UI layers
+ * its design tokens on top of Tailwind, so order matters: Tailwind first. */
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+/* ---------------------------------------------------------------------------
+ * Markdown body styling.
+ * The heavy <MarkdownRenderer> outputs raw HTML (headings, lists, code blocks).
+ * These rules make that HTML look like polished prose in both themes without
+ * pulling in a whole typography plugin.
+ * ------------------------------------------------------------------------- */
+.md-body {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.md-body > * + * { margin-top: 0.85rem; }
+.md-body h1,
+.md-body h2,
+.md-body h3 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 1.4rem;
+}
+.md-body h1 { font-size: 1.5rem; }
+.md-body h2 { font-size: 1.25rem; }
+.md-body h3 { font-size: 1.05rem; }
+.md-body ul { list-style: disc; padding-left: 1.25rem; }
+.md-body ol { list-style: decimal; padding-left: 1.25rem; }
+.md-body a {
+  color: var(--ui-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.md-body :not(pre) > code {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 0.85em;
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.3rem;
+  background: var(--ui-bg-muted);
+}
+
+/* Shiki produces dual-theme code blocks (github-light + github-dark) using CSS
+ * variables. Light theme is the default; in dark mode we swap to the dark vars.
+ * This is the standard Shiki dual-theme switch. */
+.md-body pre.shiki {
+  padding: 1rem;
+  border-radius: 0.6rem;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  border: 1px solid var(--ui-border);
+}
+.dark .md-body .shiki,
+.dark .md-body .shiki span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
+  font-style: var(--shiki-dark-font-style) !important;
+  font-weight: var(--shiki-dark-font-weight) !important;
+  text-decoration: var(--shiki-dark-text-decoration) !important;
+}
