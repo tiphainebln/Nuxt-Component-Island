@@ -7,6 +7,8 @@ demonstrates and why.
 
 > Built for a live presentation. The code is meant to be read on screen.
 
+<img width="2853" height="1623" alt="image" src="https://github.com/user-attachments/assets/6103fec7-f126-4789-9358-3a2808c7cf73" />
+
 ---
 
 ## What is a component island?
